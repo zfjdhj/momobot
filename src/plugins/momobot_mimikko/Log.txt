@@ -1,0 +1,1 @@
+download 20210223125605_nc1i.jpg with requests.get(https://mimikko.oss-cn-shanghai.aliyuncs.com/file/20210223/20210223125605_nc1i.jpg)
