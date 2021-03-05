@@ -36,3 +36,14 @@ group_id="定时通知到群"
 | mimikko energy | 领取能量值 |
 | mimikko check | 检查签到状态 |
 | (自动)签到任务 | 每日12点定时签到 |
+
+## 感谢
+原hoshino插件版:
+
+<https://github.com/zfjdhj/zfjbot-mimikko>
+
+部分代码参考：
+
+<https://github.com/Ice-Cirno/HoshinoBot>
+
+

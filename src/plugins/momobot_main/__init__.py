@@ -6,7 +6,7 @@ LastEditors: zfj
 Description: None
 GitHub: https://github.com/zfjdhj
 """
-# import nonebot
+import nonebot
 import os
 import json
 import random
@@ -18,8 +18,10 @@ from nonebot.permission import SUPERUSER
 from nonebot.rule import to_me
 from nonebot.typing import T_State
 from nonebot.adapters import Bot, Event
-
+from pydantic.tools import T
+from nonebot.plugin import export
 from .config import Config
+from .util import aiorequests
 
 # 1. 在？               判断bot是否在线
 # 2. (自动发送)猫猫上线  猫猫上线跟主人打招呼
@@ -31,6 +33,15 @@ from .config import Config
 global_config = get_driver().config
 plugin_config = Config(**global_config.dict())
 
+
+from pathlib import Path
+
+import nonebot
+
+# # store all subplugins
+# _sub_plugins = set()
+# # load sub plugins
+# _sub_plugins |= nonebot.load_plugins(str((Path(__file__).parent / "util").resolve()))
 
 plugin_path = os.path.dirname(os.path.abspath(__file__))
 res_path = plugin_config.Config.res_path
@@ -79,7 +90,13 @@ async def get_momo(bot: Bot, event: Event):
     await bot.send(event, MessageSegment.image(rf"file:///{img}"))
 
 
-momo = on_command("", handlers=[get_momo], rule=to_me())
+async def at_momo(bot: Bot, event: Event, satae: T_State) -> bool:
+    if str(event.message) != "":
+        return False
+    return True
+
+
+momo = on_command("", handlers=[get_momo], rule=at_momo)
 
 # 4. 半月刊 [编号]      查看“公主连结”半月刊，编号：2-1，2-2，etc.
 
@@ -128,3 +145,12 @@ async def reload_event_filter(bot: Bot):
 
 
 reload_filter = on_command("刷新过滤器", handlers=[reload_event_filter])
+
+# test1
+# @export()
+async def test1(bot: Bot):
+    print("test1:", bot.config.superusers)
+
+
+test1 = on_command("test1", handlers=[test1])
+# test2

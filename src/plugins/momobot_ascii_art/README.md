@@ -13,3 +13,14 @@ a plugin for nonebot2
 | 指令 | 功能 |
 | :- | :- |
 | 字符画[生成字符]<图片> | 生成字符画 |
+
+## 感谢
+原hoshino插件版:
+
+<https://github.com/zfjdhj/zfjbot-ascii_art>
+
+部分代码参考：
+
+<https://github.com/Ice-Cirno/HoshinoBot>
+<https://gist.github.com/rossning92/bb1667e5e14a63148dcd61b4455ce52f>
+

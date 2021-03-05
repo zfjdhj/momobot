@@ -1,1 +1,1 @@
-download 20210223140540_dbnv.jpg with requests.get(https://mimikko.oss-cn-shanghai.aliyuncs.com/file/20210223/20210223140540_dbnv.jpg)
+download 20210223140639_k13l.jpg with requests.get(https://mimikko.oss-cn-shanghai.aliyuncs.com/file/20210223/20210223140639_k13l.jpg)
