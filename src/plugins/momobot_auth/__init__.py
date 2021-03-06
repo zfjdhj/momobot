@@ -4,7 +4,6 @@ from nonebot import get_driver, get_bots
 from nonebot.plugin import on_command, on_regex, on_startswith
 
 from nonebot.adapters import Bot, Event
-import nonebot.adapters.cqhttp.message
 
 from nonebot_plugin_apscheduler import scheduler
 from .config import Config

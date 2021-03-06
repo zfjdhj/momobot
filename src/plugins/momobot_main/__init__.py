@@ -14,6 +14,7 @@ import datetime
 from nonebot import on_command, get_driver, on_metaevent
 from nonebot.adapters.cqhttp.message import Message, MessageSegment
 from nonebot.adapters.cqhttp.event import LifecycleMetaEvent
+from nonebot.config import Env
 from nonebot.permission import SUPERUSER
 from nonebot.rule import to_me
 from nonebot.typing import T_State
@@ -152,9 +153,12 @@ async def test1(bot: Bot):
     print("test1:", bot.config.superusers)
 
 
-test1 = on_command("test1", handlers=[test1])
+on_command("test1", handlers=[test1])
 # test2
-async def test2(event):
+async def test2(bot: Bot, event: Event):
     print(event.__dict__.keys())
     for item in event.__dict__.keys():
         print(item, event.__dict__.get(item))
+
+
+on_command("test2", handlers=[test2])

@@ -21,6 +21,7 @@
 | 插件名称 | 功能 |
 | :- | :- |
 | momobot_ascii_art | 生成字符画 |
+| momobot_auth | 猫猫契约 |
 | momobot_main | 一些自定义的回复 |
 | momobot_mimikko | mimikko自动签到 |
 | momobot_pcr_remind | pcr推送提醒 |
