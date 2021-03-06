@@ -154,3 +154,7 @@ async def test1(bot: Bot):
 
 test1 = on_command("test1", handlers=[test1])
 # test2
+async def test2(event):
+    print(event.__dict__.keys())
+    for item in event.__dict__.keys():
+        print(item, event.__dict__.get(item))

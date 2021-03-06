@@ -22,5 +22,6 @@ a plugin for nonebot2
 部分代码参考：
 
 <https://github.com/Ice-Cirno/HoshinoBot>
+
 <https://gist.github.com/rossning92/bb1667e5e14a63148dcd61b4455ce52f>
 

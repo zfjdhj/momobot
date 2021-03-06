@@ -412,7 +412,7 @@ async def invite_main(bot: Bot = get_bots(), event: Event = {}):
     msg = ""
     user_id = event.user_id
 
-    if user_id in bot.config.superusers:
+    if str(user_id) in bot.config.superusers:
         is_admin = True
     else:
         is_admin = False
