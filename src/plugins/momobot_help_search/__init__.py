@@ -19,6 +19,7 @@ with open(json_path, "r", encoding="utf8") as fp:
 
 
 async def search(bot: Bot, event: Event, state: T_State):
+    global json_data
     reply = ""
     res = []
     if state["_matched_groups"][1]:
@@ -98,7 +99,9 @@ async def search(bot: Bot, event: Event, state: T_State):
             gid = event.group_id
             await bot.send_group_forward_msg(group_id=gid, messages=li)
         else:
-            await bot.send(event, "猫猫没有找到呢~喵~")
+            with open(json_path, "r", encoding="utf8") as fp:
+                json_data = json.load(fp)
+            await bot.send(event, "猫猫没有找到呢~喵~\n请再次尝试或者联系管理员")
 
 
 on_regex(r"^(help|帮助) (.*)$", handlers=[search])

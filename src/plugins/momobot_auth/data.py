@@ -42,7 +42,7 @@ class auth:
         self.data = open_jsonfile(plugin_path + "/data.json")
 
     def get_auth_info(self, gid: str) -> dict:
-        self.data_flush()
+        self.data_refresh()
         return self.data[gid]
 
     def get_join_time(self, gid: str) -> str:
@@ -65,8 +65,7 @@ class auth:
     def save_data(self) -> None:
         write2json(plugin_path + "/data.json", self.data)
 
-    def data_flush(self):
-        self.save_data()
+    def data_refresh(self):
         self.__init__()
 
 
