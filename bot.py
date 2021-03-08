@@ -26,6 +26,7 @@ driver.register_adapter("cqhttp", CQHTTPBot)
 
 nonebot.load_builtin_plugins()
 nonebot.load_plugins("src/plugins")
+nonebot.load_plugins("yobot")
 nonebot.load_plugin("nonebot_plugin_apscheduler")
 
 # Modify some config / config depends on loaded configs

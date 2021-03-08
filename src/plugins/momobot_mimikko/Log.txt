@@ -1,1 +1,1 @@
-download 20210223140639_k13l.jpg with requests.get(https://mimikko.oss-cn-shanghai.aliyuncs.com/file/20210223/20210223140639_k13l.jpg)
+download 0308-308.png with requests.get(https://mimikko.oss-cn-shanghai.aliyuncs.com/SignCard/0308-308.png)
